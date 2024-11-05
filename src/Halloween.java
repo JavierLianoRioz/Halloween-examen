@@ -1,4 +1,4 @@
-public class Main {
+public class Halloween {
     public static void main(String args[]) {
     //candies de cada nino
         int c1 = 0;
