@@ -83,7 +83,7 @@ public class Halloween {
                     break;
                 }
 
-                i = i + 1;
+                casa = casa + 1;
             }
 
             if (bolsa1Llena && bolsa2Llena && bolsa3Llena) {
