@@ -13,6 +13,9 @@ public class Halloween {
         final int MINIMO_VALOR_DE_CARAMELOS_QUE_DAN = 1;
         final int MAXIMO_VALOR_DE_CARAMELOS_QUE_DAN = 3;
 
+        final double PROBABILIDAD_DEN_CARAMELOS = 0.8;
+        final double PROBABILIDAD_DEN_CASA_ABIERTA = 0.7;
+
         int casasVisitadas = 0;
 
         final int CHUCHEMAS_MAXIMAS_POR_BOLSA = 20;
@@ -27,8 +30,8 @@ public class Halloween {
                 System.out.println("");
                 System.out.println("Visitando casa " + casa + " del piso " + piso);
 
-                boolean CasaAbierta = (int) (Math.random() * 100 + 1) <= 70;
-                if (CasaAbierta) {
+                boolean casaAbierta = Math.random() <= PROBABILIDAD_DEN_CASA_ABIERTA;
+                if (casaAbierta) {
                     System.out.println("¡La casa está abierta!");
 
                     if (bolsa1Llena) {
@@ -37,7 +40,7 @@ public class Halloween {
                         System.out.println("¡La bolsa del niño 1 está llena!");
                     } else {
 
-                        boolean danCaramelos = (int) (Math.random() * 100 + 1) <= 80;
+                        boolean danCaramelos = Math.random() <= PROBABILIDAD_DEN_CARAMELOS;
                         int numeroCaramelasQueDan = (int) (Math.random() * (MAXIMO_VALOR_DE_CARAMELOS_QUE_DAN - MINIMO_VALOR_DE_CARAMELOS_QUE_DAN + 1) + MINIMO_VALOR_DE_CARAMELOS_QUE_DAN);
                         if (danCaramelos) {
                             caramelosNiño1 += numeroCaramelasQueDan;
@@ -53,7 +56,7 @@ public class Halloween {
                         System.out.println("¡La bolsa del niño 2 está llena!");
                     } else {
 
-                        boolean danCaramelos = (int) (Math.random() * 100 + 1) <= 80;
+                        boolean danCaramelos = Math.random() <= PROBABILIDAD_DEN_CARAMELOS;
                         int numeroCaramelasQueDan = (int) (Math.random() * (MAXIMO_VALOR_DE_CARAMELOS_QUE_DAN - MINIMO_VALOR_DE_CARAMELOS_QUE_DAN + 1) + MINIMO_VALOR_DE_CARAMELOS_QUE_DAN);
                         if (danCaramelos) {
                             caramelosNiño2 += numeroCaramelasQueDan;
@@ -69,7 +72,7 @@ public class Halloween {
                         System.out.println("¡La bolsa del niño 3 está llena!");
                     } else {
 
-                        boolean danCaramelos = (int) (Math.random() * 100 + 1) <= 80;
+                        boolean danCaramelos = Math.random() <= PROBABILIDAD_DEN_CARAMELOS;
                         int numeroCaramelasQueDan = (int) (Math.random() * (MAXIMO_VALOR_DE_CARAMELOS_QUE_DAN - MINIMO_VALOR_DE_CARAMELOS_QUE_DAN + 1) + MINIMO_VALOR_DE_CARAMELOS_QUE_DAN);
                         if (danCaramelos) {
                             caramelosNiño3 += numeroCaramelasQueDan;
