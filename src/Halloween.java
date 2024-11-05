@@ -21,7 +21,7 @@ public class Halloween {
 
             int casa = 1;
             while (casa <= 4) {
-                casasVisitadas = casasVisitadas + 1;
+                casasVisitadas++;
                 System.out.println("");
                 System.out.println("Visitando casa " + casa + " del piso " + pisoActual);
 
@@ -83,7 +83,7 @@ public class Halloween {
                     break;
                 }
 
-                casa = casa + 1;
+                casa++;
             }
 
             if (bolsa1Llena && bolsa2Llena && bolsa3Llena) {
