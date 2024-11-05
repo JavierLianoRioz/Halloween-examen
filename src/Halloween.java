@@ -10,18 +10,20 @@ public class Halloween {
         boolean bolsa2Llena = false;
         boolean bolsa3Llena = false;
 
-        int pisoActual = 1; 
-        int casasVisitadas = 0;   
+        int pisoActual = 1;
+        int casasVisitadas = 0;
 
         int chuchemasMaximasPorBolsa = 20;
 
         while (true) {
-            System.out.println("\n=== Piso " + pisoActual + " ===");
+            System.out.println("");
+            System.out.println("=== Piso " + pisoActual + " ===");
 
             int i = 1;
             while (i <= 4) {
                 casasVisitadas = casasVisitadas + 1;
-                System.out.println("\nVisitando casa " + i + " del piso " + pisoActual);
+                System.out.println("");
+                System.out.println("Visitando casa " + i + " del piso " + pisoActual);
 
                 double CasaAbierta = Math.random() * 100 + 1;
                 if ((int) CasaAbierta <= 70) {
@@ -76,14 +78,15 @@ public class Halloween {
                 }
 
                 if (bolsa1Llena && bolsa2Llena && bolsa3Llena) {
-                    System.out.println("\n¡Todas las bolsas están llenas! Terminamos la búsqueda.");
+                    System.out.println("");
+                    System.out.println("¡Todas las bolsas están llenas! Terminamos la búsqueda.");
                     break;
                 }
 
                 i = i + 1;
             }
 
-            if (bolsa1Llena && bolsa2Llena  && bolsa3Llena) {
+            if (bolsa1Llena && bolsa2Llena && bolsa3Llena) {
                 break;
             }
 
@@ -94,7 +97,8 @@ public class Halloween {
             pisoActual = pisoActual + 1;
         }
 
-        System.out.println("\n=== Resultados Finales ===");
+        System.out.println("");
+        System.out.println("=== Resultados Finales ===");
         System.out.println("Casas visitadas: " + casasVisitadas);
         System.out.println("Niño 1: " + caramelosNiño1 + " caramelos" + (bolsa1Llena ? " (Bolsa llena)" : ""));
         System.out.println("Niño 2: " + caramelosNiño2 + " caramelos" + (bolsa2Llena ? " (Bolsa llena)" : ""));
