@@ -10,19 +10,19 @@ public class Halloween {
         boolean bolsa2Llena = false;
         boolean bolsa3Llena = false;
 
-        int pisoActual = 1;
+        int piso = 1;
         int casasVisitadas = 0;
 
         final int CHUCHEMAS_MAXIMAS_POR_BOLSA = 20;
 
-        while ((bolsa1Llena && bolsa2Llena && bolsa3Llena) || pisoActual != 5) {
+        while ((bolsa1Llena && bolsa2Llena && bolsa3Llena) || piso != 5) {
             System.out.println("");
-            System.out.println("=== Piso " + pisoActual + " ===");
+            System.out.println("=== Piso " + piso + " ===");
 
             int casa = 1;
             while (casa <= 4 || (bolsa1Llena && bolsa2Llena && bolsa3Llena)) {
                 System.out.println("");
-                System.out.println("Visitando casa " + casa + " del piso " + pisoActual);
+                System.out.println("Visitando casa " + casa + " del piso " + piso);
 
                 boolean CasaAbierta = (int) (Math.random() * 100 + 1) <= 70;
                 if (CasaAbierta) {
@@ -89,7 +89,7 @@ public class Halloween {
                 System.out.println("¡Todas las bolsas están llenas! Terminamos la búsqueda.");
             }
 
-            pisoActual++;
+            piso++;
         }
 
 
