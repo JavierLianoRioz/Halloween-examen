@@ -23,13 +23,13 @@ public class Halloween {
                 casasVisitadas = casasVisitadas + 1;
                 System.out.println("\nVisitando casa " + i + " del piso " + pisoActual);
 
-                double haySuerte = Math.random() * 100 + 1;
-                if ((int) haySuerte <= 70) {
+                double CasaAbierta = Math.random() * 100 + 1;
+                if ((int) CasaAbierta <= 70) {
                     System.out.println("¡La casa está abierta!");
 
                     if (bolsa1Llena == false) {
-                        double s2 = Math.random() * 100 + 1;
-                        if ((int) s2 <= 80) {
+                        double danCaramelos = Math.random() * 100 + 1;
+                        if ((int) danCaramelos <= 80) {
                             int n = (int) (Math.random() * 3 + 1);
                             caramelosNiño1 = caramelosNiño1 + n;
                             System.out.println("Niño 1 recibió " + n + " caramelos");
@@ -43,8 +43,8 @@ public class Halloween {
                     }
 
                     if (bolsa2Llena == false) {
-                        double s2 = Math.random() * 100 + 1;
-                        if ((int) s2 <= 80) {
+                        double danCaramelos = Math.random() * 100 + 1;
+                        if ((int) danCaramelos <= 80) {
                             int n = (int) (Math.random() * 3 + 1);
                             caramelosNiño2 = caramelosNiño2 + n;
                             System.out.println("Niño 2 recibió " + n + " caramelos");
@@ -58,8 +58,8 @@ public class Halloween {
                     }
 
                     if (bolsa3Llena == false) {
-                        double s2 = Math.random() * 100 + 1;
-                        if ((int) s2 <= 80) {
+                        double danCaramelos = Math.random() * 100 + 1;
+                        if ((int) danCaramelos <= 80) {
                             int n = (int) (Math.random() * 3 + 1);
                             caramelosNiño3 = caramelosNiño3 + n;
                             System.out.println("Niño 3 recibió " + n + " caramelos");
