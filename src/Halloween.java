@@ -13,7 +13,7 @@ public class Halloween {
         int pisoActual = 1;
         int casasVisitadas = 0;
 
-        int chuchemasMaximasPorBolsa = 20;
+        final int CHUCHEMAS_MAXIMAS_POR_BOLSA = 20;
 
         while ((bolsa1Llena && bolsa2Llena && bolsa3Llena) || pisoActual != 5) {
             System.out.println("");
@@ -29,7 +29,7 @@ public class Halloween {
                     System.out.println("¡La casa está abierta!");
 
                     if (bolsa1Llena) {
-                        caramelosNiño1 = chuchemasMaximasPorBolsa;
+                        caramelosNiño1 = CHUCHEMAS_MAXIMAS_POR_BOLSA;
 
                         System.out.println("¡La bolsa del niño 1 está llena!");
                     } else {
@@ -38,14 +38,14 @@ public class Halloween {
                         int numeroCaramelasQueDan = (int) (Math.random() * 3 + 1);
                         if (danCaramelos) {
                             caramelosNiño1 += numeroCaramelasQueDan;
-                            bolsa1Llena = caramelosNiño1 >= chuchemasMaximasPorBolsa;
+                            bolsa1Llena = caramelosNiño1 >= CHUCHEMAS_MAXIMAS_POR_BOLSA;
                         }
 
                         System.out.println("Niño 1 recibió " + numeroCaramelasQueDan + " caramelos");
                     }
 
                     if (bolsa2Llena) {
-                        caramelosNiño2 = chuchemasMaximasPorBolsa;
+                        caramelosNiño2 = CHUCHEMAS_MAXIMAS_POR_BOLSA;
 
                         System.out.println("¡La bolsa del niño 2 está llena!");
                     } else {
@@ -54,14 +54,14 @@ public class Halloween {
                         int numeroCaramelasQueDan = (int) (Math.random() * 3 + 1);
                         if (danCaramelos) {
                             caramelosNiño2 += numeroCaramelasQueDan;
-                            bolsa2Llena = caramelosNiño2 >= chuchemasMaximasPorBolsa;
+                            bolsa2Llena = caramelosNiño2 >= CHUCHEMAS_MAXIMAS_POR_BOLSA;
                         }
 
                         System.out.println("Niño 2 recibió " + numeroCaramelasQueDan + " caramelos");
                     }
 
                     if (bolsa3Llena) {
-                        caramelosNiño3 = chuchemasMaximasPorBolsa;
+                        caramelosNiño3 = CHUCHEMAS_MAXIMAS_POR_BOLSA;
 
                         System.out.println("¡La bolsa del niño 3 está llena!");
                     } else {
@@ -70,7 +70,7 @@ public class Halloween {
                         int numeroCaramelasQueDan = (int) (Math.random() * 3 + 1);
                         if (danCaramelos) {
                             caramelosNiño3 += numeroCaramelasQueDan;
-                            bolsa3Llena = caramelosNiño3 >= chuchemasMaximasPorBolsa;
+                            bolsa3Llena = caramelosNiño3 >= CHUCHEMAS_MAXIMAS_POR_BOLSA;
                         }
 
                         System.out.println("Niño 3 recibió " + numeroCaramelasQueDan + " caramelos");
