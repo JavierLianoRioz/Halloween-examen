@@ -2,79 +2,71 @@
 public class Halloween {
 
     public static void main(String args[]) {
-        //candies de cada nino
-        int c1 = 0;
-        int c2 = 0;
-        int c3 = 0;
+        int caramelosNiño1 = 0;
+        int caramelosNiño2 = 0;
+        int caramelosNiño3 = 0;
 
-        //bolsas llenas?
-        boolean b1 = false;
-        boolean b2 = false;
-        boolean b3 = false;
+        boolean bolsa1Llena = false;
+        boolean bolsa2Llena = false;
+        boolean bolsa3Llena = false;
 
-        //control del edificio
-        int p = 1;   //piso actual
-        int v = 0;   //casas visitadas
+        int pisoActual = 1; 
+        int casasVisitadas = 0;   
 
-        //max candies x bolsa
-        int max = 20;
+        int chuchemasMaximasPorBolsa = 20;
 
-        while (true) {  //bucle principal del edificio
-            System.out.println("\n=== Piso " + p + " ===");
+        while (true) {
+            System.out.println("\n=== Piso " + pisoActual + " ===");
 
             int i = 1;
-            while (i <= 4) {  //bucle de casas del piso
-                v = v + 1;
-                System.out.println("\nVisitando casa " + i + " del piso " + p);
+            while (i <= 4) {
+                casasVisitadas = casasVisitadas + 1;
+                System.out.println("\nVisitando casa " + i + " del piso " + pisoActual);
 
-                //ver si hay suerte
-                double suerte = Math.random() * 100 + 1;
-                if ((int) suerte <= 70) {
+                double haySuerte = Math.random() * 100 + 1;
+                if ((int) haySuerte <= 70) {
                     System.out.println("¡La casa está abierta!");
 
-                    //nino 1
-                    if (b1 == false) {
+                    if (bolsa1Llena == false) {
                         double s2 = Math.random() * 100 + 1;
                         if ((int) s2 <= 80) {
                             int n = (int) (Math.random() * 3 + 1);
-                            c1 = c1 + n;
+                            caramelosNiño1 = caramelosNiño1 + n;
                             System.out.println("Niño 1 recibió " + n + " caramelos");
 
-                            if (c1 >= max) {
-                                b1 = true;
-                                c1 = max;
+                            if (caramelosNiño1 >= chuchemasMaximasPorBolsa) {
+                                bolsa1Llena = true;
+                                caramelosNiño1 = chuchemasMaximasPorBolsa;
                                 System.out.println("¡La bolsa del niño 1 está llena!");
                             }
                         }
                     }
 
-                    //nino 2
-                    if (b2 == false) {
+                    if (bolsa2Llena == false) {
                         double s2 = Math.random() * 100 + 1;
                         if ((int) s2 <= 80) {
                             int n = (int) (Math.random() * 3 + 1);
-                            c2 = c2 + n;
+                            caramelosNiño2 = caramelosNiño2 + n;
                             System.out.println("Niño 2 recibió " + n + " caramelos");
 
-                            if (c2 >= max) {
-                                b2 = true;
-                                c2 = max;
+                            if (caramelosNiño2 >= chuchemasMaximasPorBolsa) {
+                                bolsa2Llena = true;
+                                caramelosNiño2 = chuchemasMaximasPorBolsa;
                                 System.out.println("¡La bolsa del niño 2 está llena!");
                             }
                         }
                     }
 
-                    //nino 3
-                    if (b3 == false) {
+                    if (bolsa3Llena == false) {
                         double s2 = Math.random() * 100 + 1;
                         if ((int) s2 <= 80) {
                             int n = (int) (Math.random() * 3 + 1);
-                            c3 = c3 + n;
+                            caramelosNiño3 = caramelosNiño3 + n;
                             System.out.println("Niño 3 recibió " + n + " caramelos");
 
-                            if (c3 >= max) {
-                                b3 = true;
-                                c3 = max;
+                            if (caramelosNiño3 >= chuchemasMaximasPorBolsa) {
+                                bolsa3Llena = true;
+                                caramelosNiño3 = chuchemasMaximasPorBolsa;
                                 System.out.println("¡La bolsa del niño 3 está llena!");
                             }
                         }
@@ -83,8 +75,7 @@ public class Halloween {
                     System.out.println("Casa cerrada, seguimos adelante...");
                 }
 
-                //si todas las bolsas estan llenas salimos
-                if (b1 && b2 && b3) {
+                if (bolsa1Llena && bolsa2Llena && bolsa3Llena) {
                     System.out.println("\n¡Todas las bolsas están llenas! Terminamos la búsqueda.");
                     break;
                 }
@@ -92,24 +83,21 @@ public class Halloween {
                 i = i + 1;
             }
 
-            //salir si todas las bolsas estan llenas
-            if (b1 && b2 && b3) {
+            if (bolsa1Llena && bolsa2Llena  && bolsa3Llena) {
                 break;
             }
 
-            //salir si llegamos al ultimo piso
-            if (p == 5) {
+            if (pisoActual == 5) {
                 break;
             }
 
-            p = p + 1;
+            pisoActual = pisoActual + 1;
         }
 
-        //print final
         System.out.println("\n=== Resultados Finales ===");
-        System.out.println("Casas visitadas: " + v);
-        System.out.println("Niño 1: " + c1 + " caramelos" + (b1 ? " (Bolsa llena)" : ""));
-        System.out.println("Niño 2: " + c2 + " caramelos" + (b2 ? " (Bolsa llena)" : ""));
-        System.out.println("Niño 3: " + c3 + " caramelos" + (b3 ? " (Bolsa llena)" : ""));
+        System.out.println("Casas visitadas: " + casasVisitadas);
+        System.out.println("Niño 1: " + caramelosNiño1 + " caramelos" + (bolsa1Llena ? " (Bolsa llena)" : ""));
+        System.out.println("Niño 2: " + caramelosNiño2 + " caramelos" + (bolsa2Llena ? " (Bolsa llena)" : ""));
+        System.out.println("Niño 3: " + caramelosNiño3 + " caramelos" + (bolsa3Llena ? " (Bolsa llena)" : ""));
     }
 }
