@@ -10,12 +10,12 @@ public class Halloween {
         boolean bolsa2Llena = false;
         boolean bolsa3Llena = false;
 
-        int piso = 1;
         int casasVisitadas = 0;
-
+        
         final int CHUCHEMAS_MAXIMAS_POR_BOLSA = 20;
-
-        while ((bolsa1Llena && bolsa2Llena && bolsa3Llena) || piso <= 5) {
+        
+        int piso = 1;
+        while (piso <= 5 || (bolsa1Llena && bolsa2Llena && bolsa3Llena)) {
             System.out.println("");
             System.out.println("=== Piso " + piso + " ===");
 
