@@ -19,22 +19,22 @@ public class Halloween {
             System.out.println("");
             System.out.println("=== Piso " + pisoActual + " ===");
 
-            int i = 1;
-            while (i <= 4) {
+            int casa = 1;
+            while (casa <= 4) {
                 casasVisitadas = casasVisitadas + 1;
                 System.out.println("");
-                System.out.println("Visitando casa " + i + " del piso " + pisoActual);
+                System.out.println("Visitando casa " + casa + " del piso " + pisoActual);
 
-                double CasaAbierta = Math.random() * 100 + 1;
-                if ((int) CasaAbierta <= 70) {
+                int CasaAbierta = (int)(Math.random() * 100 + 1);
+                if (CasaAbierta <= 70) {
                     System.out.println("¡La casa está abierta!");
 
                     if (bolsa1Llena == false) {
-                        double danCaramelos = Math.random() * 100 + 1;
-                        if ((int) danCaramelos <= 80) {
-                            int n = (int) (Math.random() * 3 + 1);
-                            caramelosNiño1 = caramelosNiño1 + n;
-                            System.out.println("Niño 1 recibió " + n + " caramelos");
+                        int danCaramelos = (int)(Math.random() * 100 + 1);
+                        if (danCaramelos <= 80) {
+                            int numeroCaramelasQueDan = (int) (Math.random() * 3 + 1);
+                            caramelosNiño1 = caramelosNiño1 + numeroCaramelasQueDan ;
+                            System.out.println("Niño 1 recibió " + numeroCaramelasQueDan  + " caramelos");
 
                             if (caramelosNiño1 >= chuchemasMaximasPorBolsa) {
                                 bolsa1Llena = true;
@@ -45,11 +45,11 @@ public class Halloween {
                     }
 
                     if (bolsa2Llena == false) {
-                        double danCaramelos = Math.random() * 100 + 1;
-                        if ((int) danCaramelos <= 80) {
-                            int n = (int) (Math.random() * 3 + 1);
-                            caramelosNiño2 = caramelosNiño2 + n;
-                            System.out.println("Niño 2 recibió " + n + " caramelos");
+                        int danCaramelos = (int)(Math.random() * 100 + 1);
+                        if (danCaramelos <= 80) {
+                            int numeroCaramelasQueDan = (int) (Math.random() * 3 + 1);
+                            caramelosNiño2 = caramelosNiño2 + numeroCaramelasQueDan;
+                            System.out.println("Niño 2 recibió " + numeroCaramelasQueDan + " caramelos");
 
                             if (caramelosNiño2 >= chuchemasMaximasPorBolsa) {
                                 bolsa2Llena = true;
@@ -60,11 +60,11 @@ public class Halloween {
                     }
 
                     if (bolsa3Llena == false) {
-                        double danCaramelos = Math.random() * 100 + 1;
-                        if ((int) danCaramelos <= 80) {
-                            int n = (int) (Math.random() * 3 + 1);
-                            caramelosNiño3 = caramelosNiño3 + n;
-                            System.out.println("Niño 3 recibió " + n + " caramelos");
+                        int danCaramelos = (int)(Math.random() * 100 + 1);
+                        if (danCaramelos <= 80) {
+                            int numeroCaramelasQueDan = (int) (Math.random() * 3 + 1);
+                            caramelosNiño3 = caramelosNiño3 + numeroCaramelasQueDan;
+                            System.out.println("Niño 3 recibió " + numeroCaramelasQueDan + " caramelos");
 
                             if (caramelosNiño3 >= chuchemasMaximasPorBolsa) {
                                 bolsa3Llena = true;
