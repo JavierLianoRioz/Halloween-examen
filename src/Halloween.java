@@ -15,7 +15,7 @@ public class Halloween {
 
         int chuchemasMaximasPorBolsa = 20;
 
-        while (true) {
+        while ((bolsa1Llena && bolsa2Llena && bolsa3Llena) || pisoActual == 5) {
             System.out.println("");
             System.out.println("=== Piso " + pisoActual + " ===");
 
@@ -84,14 +84,6 @@ public class Halloween {
                 }
 
                 casa++;
-            }
-
-            if (bolsa1Llena && bolsa2Llena && bolsa3Llena) {
-                break;
-            }
-
-            if (pisoActual == 5) {
-                break;
             }
 
             pisoActual = pisoActual + 1;
