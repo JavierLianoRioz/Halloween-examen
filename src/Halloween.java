@@ -15,7 +15,7 @@ public class Halloween {
 
         final int CHUCHEMAS_MAXIMAS_POR_BOLSA = 20;
 
-        while ((bolsa1Llena && bolsa2Llena && bolsa3Llena) || piso != 5) {
+        while ((bolsa1Llena && bolsa2Llena && bolsa3Llena) || piso <= 5) {
             System.out.println("");
             System.out.println("=== Piso " + piso + " ===");
 
