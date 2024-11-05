@@ -41,13 +41,13 @@ public class Halloween {
                     } else {
 
                         boolean danCaramelos = Math.random() <= PROBABILIDAD_DEN_CARAMELOS;
-                        int numeroCaramelasQueDan = (int) (Math.random() * (MAXIMO_VALOR_DE_CARAMELOS_QUE_DAN - MINIMO_VALOR_DE_CARAMELOS_QUE_DAN + 1) + MINIMO_VALOR_DE_CARAMELOS_QUE_DAN);
                         if (danCaramelos) {
+                            int numeroCaramelasQueDan = (int) (Math.random() * (MAXIMO_VALOR_DE_CARAMELOS_QUE_DAN - MINIMO_VALOR_DE_CARAMELOS_QUE_DAN + 1) + MINIMO_VALOR_DE_CARAMELOS_QUE_DAN);
                             caramelosNiño1 += numeroCaramelasQueDan;
                             bolsa1Llena = caramelosNiño1 >= CHUCHEMAS_MAXIMAS_POR_BOLSA;
+                            System.out.println("Niño 1 recibió " + numeroCaramelasQueDan + " caramelos");
                         }
 
-                        System.out.println("Niño 1 recibió " + numeroCaramelasQueDan + " caramelos");
                     }
 
                     if (bolsa2Llena) {
@@ -57,13 +57,13 @@ public class Halloween {
                     } else {
 
                         boolean danCaramelos = Math.random() <= PROBABILIDAD_DEN_CARAMELOS;
-                        int numeroCaramelasQueDan = (int) (Math.random() * (MAXIMO_VALOR_DE_CARAMELOS_QUE_DAN - MINIMO_VALOR_DE_CARAMELOS_QUE_DAN + 1) + MINIMO_VALOR_DE_CARAMELOS_QUE_DAN);
                         if (danCaramelos) {
+                            int numeroCaramelasQueDan = (int) (Math.random() * (MAXIMO_VALOR_DE_CARAMELOS_QUE_DAN - MINIMO_VALOR_DE_CARAMELOS_QUE_DAN + 1) + MINIMO_VALOR_DE_CARAMELOS_QUE_DAN);
                             caramelosNiño2 += numeroCaramelasQueDan;
                             bolsa2Llena = caramelosNiño2 >= CHUCHEMAS_MAXIMAS_POR_BOLSA;
+                            System.out.println("Niño 2 recibió " + numeroCaramelasQueDan + " caramelos");
                         }
 
-                        System.out.println("Niño 2 recibió " + numeroCaramelasQueDan + " caramelos");
                     }
 
                     if (bolsa3Llena) {
@@ -73,13 +73,13 @@ public class Halloween {
                     } else {
 
                         boolean danCaramelos = Math.random() <= PROBABILIDAD_DEN_CARAMELOS;
-                        int numeroCaramelasQueDan = (int) (Math.random() * (MAXIMO_VALOR_DE_CARAMELOS_QUE_DAN - MINIMO_VALOR_DE_CARAMELOS_QUE_DAN + 1) + MINIMO_VALOR_DE_CARAMELOS_QUE_DAN);
                         if (danCaramelos) {
+                            int numeroCaramelasQueDan = (int) (Math.random() * (MAXIMO_VALOR_DE_CARAMELOS_QUE_DAN - MINIMO_VALOR_DE_CARAMELOS_QUE_DAN + 1) + MINIMO_VALOR_DE_CARAMELOS_QUE_DAN);
                             caramelosNiño3 += numeroCaramelasQueDan;
                             bolsa3Llena = caramelosNiño3 >= CHUCHEMAS_MAXIMAS_POR_BOLSA;
+                            System.out.println("Niño 3 recibió " + numeroCaramelasQueDan + " caramelos");
                         }
 
-                        System.out.println("Niño 3 recibió " + numeroCaramelasQueDan + " caramelos");
                     }
 
                 } else {
