@@ -10,10 +10,13 @@ public class Halloween {
         boolean bolsa2Llena = false;
         boolean bolsa3Llena = false;
 
+        final int MINIMO_VALOR_DE_CARAMELOS_QUE_DAN = 1;
+        final int MAXIMO_VALOR_DE_CARAMELOS_QUE_DAN = 3;
+
         int casasVisitadas = 0;
-        
+
         final int CHUCHEMAS_MAXIMAS_POR_BOLSA = 20;
-        
+
         int piso = 1;
         while (piso <= 5 || (bolsa1Llena && bolsa2Llena && bolsa3Llena)) {
             System.out.println("");
@@ -35,7 +38,7 @@ public class Halloween {
                     } else {
 
                         boolean danCaramelos = (int) (Math.random() * 100 + 1) <= 80;
-                        int numeroCaramelasQueDan = (int) (Math.random() * 3 + 1);
+                        int numeroCaramelasQueDan = (int) (Math.random() * (MAXIMO_VALOR_DE_CARAMELOS_QUE_DAN - MINIMO_VALOR_DE_CARAMELOS_QUE_DAN + 1) + MINIMO_VALOR_DE_CARAMELOS_QUE_DAN);
                         if (danCaramelos) {
                             caramelosNiño1 += numeroCaramelasQueDan;
                             bolsa1Llena = caramelosNiño1 >= CHUCHEMAS_MAXIMAS_POR_BOLSA;
@@ -51,7 +54,7 @@ public class Halloween {
                     } else {
 
                         boolean danCaramelos = (int) (Math.random() * 100 + 1) <= 80;
-                        int numeroCaramelasQueDan = (int) (Math.random() * 3 + 1);
+                        int numeroCaramelasQueDan = (int) (Math.random() * (MAXIMO_VALOR_DE_CARAMELOS_QUE_DAN - MINIMO_VALOR_DE_CARAMELOS_QUE_DAN + 1) + MINIMO_VALOR_DE_CARAMELOS_QUE_DAN);
                         if (danCaramelos) {
                             caramelosNiño2 += numeroCaramelasQueDan;
                             bolsa2Llena = caramelosNiño2 >= CHUCHEMAS_MAXIMAS_POR_BOLSA;
@@ -67,7 +70,7 @@ public class Halloween {
                     } else {
 
                         boolean danCaramelos = (int) (Math.random() * 100 + 1) <= 80;
-                        int numeroCaramelasQueDan = (int) (Math.random() * 3 + 1);
+                        int numeroCaramelasQueDan = (int) (Math.random() * (MAXIMO_VALOR_DE_CARAMELOS_QUE_DAN - MINIMO_VALOR_DE_CARAMELOS_QUE_DAN + 1) + MINIMO_VALOR_DE_CARAMELOS_QUE_DAN);
                         if (danCaramelos) {
                             caramelosNiño3 += numeroCaramelasQueDan;
                             bolsa3Llena = caramelosNiño3 >= CHUCHEMAS_MAXIMAS_POR_BOLSA;
@@ -91,7 +94,6 @@ public class Halloween {
 
             piso++;
         }
-
 
         System.out.println("");
         System.out.println("=== Resultados Finales ===");
